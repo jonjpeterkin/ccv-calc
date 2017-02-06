@@ -1,0 +1,1 @@
+export const SUBMIT_PROBLEM = 'SUBMIT_PROBLEM'
