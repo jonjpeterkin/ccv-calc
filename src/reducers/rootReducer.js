@@ -1,11 +1,16 @@
 import { combineReducers } from 'redux'
-import probs from './problemsReducer'
+import RESET from '../constants/actionTypes'
+import prob from './problemReducer'
 
 const appReducer = combineReducers({
-	probs
+	prob
 })
 
 const rootReducer = (state, action) => {
+	if(action.type === RESET){
+		state = undefined
+	}
+
 	return appReducer(state, action)
 }
 
