@@ -1,10 +1,12 @@
 ## STORE STRUCTURE
 
-Problems
+Problem
+	- Raw
 	- Operation
 	- Answer
 	- Integers
 		- Value
+		- Position
 		- Digits
 			- Value
 			- Place
