@@ -33,7 +33,7 @@ function buildInts(prob) {
 	})
 }
 
-export default function setProblemInfo() {
+export default function buildProblem() {
 	return function(dispatch, getState) {
 		const oper = determineOper(getState().prob.raw)
 		const ints = buildInts(getState().prob.raw)

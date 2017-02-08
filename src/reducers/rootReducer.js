@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
 import RESET from '../constants/actionTypes'
 import prob from './problemReducer'
+import sols from './solutionsReducer'
 
 const appReducer = combineReducers({
-	prob
+	prob, sols
 })
 
 const rootReducer = (state, action) => {
