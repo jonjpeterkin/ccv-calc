@@ -9,6 +9,7 @@ class App extends Component {
     	<MuiThemeProvider>
 	      <div className="App">
 	      	<ProbForm />
+          <br/>
 	      	<Solutions />
 	      </div>
     	</MuiThemeProvider>

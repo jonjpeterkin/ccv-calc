@@ -11,6 +11,6 @@ export default function buildSolution(prob, method) {
 				steps: {}
 			}
 		}})
-		dispatch(buildStep())
+		dispatch(buildStep(prob))
 	}
 }

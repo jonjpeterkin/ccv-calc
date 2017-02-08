@@ -5,21 +5,43 @@ import Solution from './Solution'
 import buildSolution from '../actions/buildSolution'
 
 class Solutions extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {loaded: false}
+	}
 
 	componentWillMount() {
+		this.buildContents(this.props)
+	}
+
+	componentWillUpdate(nextProps) {
+		this.buildContents(nextProps)
+	}
+
+	buildContents(props) {
 		// this.props.methods.forEach((method) => this.buildSolution(this.props.prob, method))
-		this.props.buildSolution(this.props.prob, 'pvc')
+		if(props.prob && !props.sols) {
+			props.buildSolution(props.prob, 'pvc')
+			this.setState({loaded: true})
+		} else if(!this.props.prob) {
+			this.setState({loaded: false})
+		}
 	}
 
 	renderSolutions() {
-		debugger
-		return <Solution sol={this.props.sols.pvc} />
+		// this.props.methods.forEach((method) => this.buildSolution(this.props.prob, method))
+		if(this.props.prob && !this.props.sols) {
+			return "SOLUTIONS GO HERE (NO SOLS)"
+		} else if(!this.props.prob) {
+			return "SOLUTIONS GO HERE (NO PROB)"
+		}
+		return <Solution {...this.props.sols.pvc} />
 	}
 
 	render() {
 		return (
 			<div>
-				{this.renderSolutions}
+				{this.renderSolutions()}
 			</div>
 		)
 	}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import submitProblem from '../actions/submitProblem'
+import reset from '../actions/reset'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 
@@ -19,6 +20,7 @@ class ProbForm extends Component {
 	handleSubmit(event) {
 		event.preventDefault()
 		console.log(`submitted: ${this.state.prob}`)
+		this.props.reset()
 		this.props.submitProblem(this.state)
 	}
 
@@ -41,7 +43,7 @@ class ProbForm extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({submitProblem}, dispatch)
+	return bindActionCreators({submitProblem, reset}, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(ProbForm)

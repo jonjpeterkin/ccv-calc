@@ -14,7 +14,7 @@ function determineAnswer(probState) {
 }
 
 function buildDigits(val) {
-	return val.split("").map((digit, idx) => {
+	return val.split("").reverse().map((digit, idx) => {
 		return {
 			val: parseInt(digit, 10), place: 10 ** idx
 		}
@@ -23,7 +23,7 @@ function buildDigits(val) {
 
 function buildInts(prob) {
 	const vals = prob.match(/\d+/g)
-	if(prob.includes('.') || vals.length !== 2) {
+	if(prob.includes('.') || (vals && vals.length !== 2)) {
 		return "INVALID"
 	}
 	return vals.map((val, idx) => {

@@ -5,7 +5,6 @@ export default function prob(state = null, action) {
 		case ADD_SOLUTION:
 			return {...state, [action.payload.sol.name]: action.payload.sol}
 		case ADD_STEP:
-			debugger
 			return {...state,
 				[action.payload.solName]: {
 					steps: {

@@ -9,14 +9,13 @@ class Solution extends Component {
 		// return this.props.sol.steps.map((step) => {
 		// 	return <Step bp={step.bp} />
 		// })
-		debugger
-		return <Step props={this.props.sol.steps.one} />
+		return <Step {...this.props.steps.one} />
 	}
 
 	render() {
 		return (
 			<div>
-				A SOLUTION
+				{this.props.name}
 				{this.renderSteps()}
 			</div>
 		)

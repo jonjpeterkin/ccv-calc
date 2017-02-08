@@ -8,6 +8,7 @@ class Step extends Component {
 			<div>
 				A STEP
 				<StepGraphic bp={this.props.bp} />
+				{this.props.desc}
 			</div>
 		)
 	}

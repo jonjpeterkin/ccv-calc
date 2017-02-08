@@ -8,7 +8,7 @@ export default class StepGraphic extends Component {
 
   draw(bp) {
 	  var ctx = this.refs.graphic.getContext('2d')
-		bp.base(ctx)
+		bp(ctx)
   }
 
 	render() {

@@ -6,18 +6,20 @@ import {
 } from '../constants/actionTypes'
 
 
-const defaultState = {
-	raw: null,
-	oper: null,
-	answer: null,
-	ints: [{
-		val: null,
-		digits: {
-			val: null,
-			place: null
-		}
-	}]
-}
+// const defaultState = {
+// 	raw: null,
+// 	oper: null,
+// 	answer: null,
+// 	ints: [{
+// 		val: null,
+// 		digits: {
+// 			val: null,
+// 			place: null
+// 		}
+// 	}]
+// }
+
+const defaultState = null
 
 export default function prob(state = defaultState, action) {
 	switch(action.type) {
