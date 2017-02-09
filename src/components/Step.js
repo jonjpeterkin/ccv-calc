@@ -6,7 +6,7 @@ class Step extends Component {
 	render() {
 		return (
 			<div>
-				STEP 1
+				<p>STEP 1</p>
 				<StepGraphic bp={this.props.bp} />
 				{this.props.desc}
 			</div>

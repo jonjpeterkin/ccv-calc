@@ -4,7 +4,7 @@ export const base = ctx => {
 	ctx.stroke(chartBase)
 	ctx.font = '24px Roboto';
 	ctx.fillText('Hundreds', 20, 30);
-	ctx.fillText('Tens', 190, 30);
+	ctx.fillText('Tens', 184, 30);
 	ctx.fillText('Ones', 320, 30);
 }
 
