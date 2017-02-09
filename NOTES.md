@@ -1,14 +1,3 @@
-## BP STRUCTURE
-
-bp
-	- desc
-	- num?
-	- draw
-		- base
-		- annot
-		- numRep
-		- misc
-
 ## STORE STRUCTURE
 
 Problem
@@ -22,7 +11,7 @@ Problem
 			- Value
 			- Place
 Solutions
-	- Method
+	- Name
  	- Steps
  		- Explanation
 Methods
@@ -37,4 +26,10 @@ arrow method (arrow way)
 		 -10		-10    -1			-1		 -1
 	62 --> 52 --> 42 --> 41 --> 40 --> 39
 compose a ten  [m4.tB.l6]
+
+## KINKS / SHORTCUTS TAKEN THAT NEED TO BE WORKED OUT
+
+currently not using a constant as the RESET action type
+refactor incredibly ugly 3x nested loop @ stepList ln[5-11]
+
 
