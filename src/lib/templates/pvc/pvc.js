@@ -1,4 +1,4 @@
-export const base = ctx => {
+export const chartBase = ctx => {
 	// ctx.strokeStyle = '#000000'
 	var chartBase = new Path2D('M0 50 h 420 M140 0 v 300 M280 0 v 300')
 	ctx.stroke(chartBase)

@@ -51,7 +51,7 @@ class ProbForm extends Component {
 				>
 				<form onSubmit={this.handleSubmit.bind(this)}>
 					<TextField name="prob"
-						style={{fontSize: '18px'}}
+						style={{fontSize: '18px', marginLeft: 40}}
 						floatingLabelText="Enter a simple math problem"
 						floatingLabelFixed={false}
 						underlineShow={false}
@@ -59,7 +59,7 @@ class ProbForm extends Component {
 					<RaisedButton label="Solve" name="submit" type="submit"
 						disabled={this.state.solveDisable}
 						backgroundColor="#a4c639"
-						style={{margin: 10}} />
+						style={{margin: 10, marginLeft: 20}} />
 				</form>
 				</Paper>
 			</div>

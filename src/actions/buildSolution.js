@@ -1,6 +1,6 @@
 //builds all the Steps
 import { ADD_SOLUTION } from '../constants/actionTypes'
-import { stepList } from '../lib/templates/pvc/stepList'
+import stepList from '../lib/templates/stepList'
 import buildStep from './buildStep'
 
 
@@ -12,6 +12,10 @@ export default function buildSolution(prob, method) {
 				steps: {}
 			}
 		}})
-		dispatch(buildStep(prob))
+		const myStepList = stepList
+
+		for(var stepNum in myStepList[method]) {
+			dispatch(buildStep(prob, method, stepNum))
+		}
 	}
 }

@@ -1,4 +1,4 @@
-import { numRep, base } from './pvc'
+import { numRep, chartBase } from './pvc'
 
 function tokenCoords(int, digit, i) {
 	var x = 465 - (140 * (Math.log10(digit.place) + 1)) + ((i % 3) * 25)
@@ -6,8 +6,8 @@ function tokenCoords(int, digit, i) {
 	return {x, y}
 }
 
-const step1BP = (prob, ctx) => {
-	base(ctx)
+const step2BP = (prob, ctx) => {
+	chartBase(ctx)
 	for(var int of prob.ints) {
 		for(var digit of int.digits) {
 			for(var i = 0; i < digit.val; i++) {
@@ -17,10 +17,21 @@ const step1BP = (prob, ctx) => {
 	}
 }
 
-export const stepList = {
+const step1BP = (prob, ctx) => {
+
+}
+
+
+
+export const pvcStepList = {
 	1: {
-		desc: "Draw a place value chart. Break each number up by place value and fill out the chart",
-		num: "one",
+		desc: "Decompose the problem.",
+		num: 1,
 		bp: step1BP
+	},
+	2: {
+		desc: "Draw and fill out a place value chart.",
+		num: 2,
+		bp: step2BP
 	}
 }

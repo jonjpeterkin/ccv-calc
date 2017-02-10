@@ -1,4 +1,12 @@
+body {
+  background-color: teal;
+
+}
+
 .App {
 	font: 1em "Roboto";
+}
+
+.step {
   text-align: center;
 }

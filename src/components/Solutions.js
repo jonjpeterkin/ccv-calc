@@ -23,7 +23,7 @@ class Solutions extends Component {
 		if(props.prob && !props.sols) {
 			props.buildSolution(props.prob, 'pvc')
 			this.setState({loaded: true})
-		} else if(!this.props.prob) {
+		} else if(!props.prob) {
 			this.setState({loaded: false})
 		}
 	}
@@ -33,9 +33,9 @@ class Solutions extends Component {
 		if(this.props.prob && !this.props.sols) {
 			return "SOLUTIONS GO HERE (NO SOLS)"
 		} else if(!this.props.prob) {
-			return "SOLUTIONS GO HERE (NO PROB)"
+			return "SOLUTIONS GO HERE (ENTER A PROBLEM)"
 		}
-		return <Solution {...this.props.sols.pvc} />
+		return <Solution name='pvc' desc='Grade 2 Common Core Strategy' />
 	}
 
 	render() {
