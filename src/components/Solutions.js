@@ -31,9 +31,11 @@ class Solutions extends Component {
 	renderSolutions() {
 		// this.props.methods.forEach((method) => this.buildSolution(this.props.prob, method))
 		if(this.props.prob && !this.props.sols) {
-			return "SOLUTIONS GO HERE (NO SOLS)"
+			// return "SOLUTIONS GO HERE (NO SOLS)"
+			return ""
 		} else if(!this.props.prob) {
-			return "SOLUTIONS GO HERE (ENTER A PROBLEM)"
+			// return "SOLUTIONS GO HERE (ENTER A PROBLEM)"
+			return ""
 		}
 		return <Solution name='pvc' desc='Grade 2 Common Core Strategy' />
 	}

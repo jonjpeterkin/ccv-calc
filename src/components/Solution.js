@@ -9,7 +9,6 @@ import Divider from 'material-ui/Divider'
 class Solution extends Component {
 
 	renderSteps() {
-		//BROKN
 		var allSteps = []
 		for(var step in this.props.sols[this.props.name].steps) {
 			allSteps.push(<Step {...this.props.sols[this.props.name].steps[step]} />)

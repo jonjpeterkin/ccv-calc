@@ -7,8 +7,9 @@ class Step extends Component {
 		return (
 			<div className='step'>
 				<p>STEP {this.props.num}</p>
-				<StepGraphic bp={this.props.bp} />
 				{this.props.desc}
+				<StepGraphic bp={this.props.bp} {...this.props.canvasDims} />
+				<br />
 			</div>
 		)
 	}
