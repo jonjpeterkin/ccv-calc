@@ -1,4 +1,4 @@
-import { pvcStepList } from './pvc/pvcStepList'
+import pvcStepList from './pvc'
 
 const stepList = {
 	pvc: pvcStepList
