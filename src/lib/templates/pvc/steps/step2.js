@@ -7,7 +7,7 @@ const bp = (prob, ctx) => {
 	for(var int of prob.ints) {
 		for(var digit of int.digits) {
 			for(var i = 0; i < digit.val; i++) {
-				token(ctx, xToken(int, digit, i), yToken(int, digit, i))
+				token(ctx, xToken(digit.place, i), yToken(int.pos, i))
 			}
 		}
 	}

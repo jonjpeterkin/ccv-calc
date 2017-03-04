@@ -4,6 +4,7 @@ import placeNames from '../elements/placeNames'
 const bp = (prob, ctx) => {
 	decompBase(ctx)
 	ctx.font = '24px Roboto'
+	// Badly needs to be refactored
 	Object.values(prob.ints).forEach((int, i) => {
 		ctx.fillText(int.val, 20 + (330 * i), 60)
 		Object.values(int.digits).reverse().forEach((digit, j) => {

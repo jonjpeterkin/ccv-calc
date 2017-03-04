@@ -14,7 +14,12 @@ export default class StepGraphic extends Component {
 	render() {
 		return (
 			<div>
-			  <canvas ref={'graphic'} id="stepGraphic" width={this.props.width} height={this.props.height}></canvas>
+			  <canvas
+				  ref={'graphic'}
+				  id="stepGraphic"
+				  width={this.props.width}
+				  height={this.props.height}>
+		  </canvas>
 			</div>
 		)
 	}

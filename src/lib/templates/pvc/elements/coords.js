@@ -1,12 +1,12 @@
 
-export const xToken = (int, digit, i) => {
+export const xToken = (place, i) => {
 	//		  places into correct column		                provides wrap and individual spacing
-	return 465 - (140 * (Math.log10(digit.place) + 1)) + ((i % 3) * 28)
+	return 465 - (140 * (Math.log10(place) + 1)) + ((i % 3) * 28)
 }
 
-export const yToken = (int, digit, i) => {
+export const yToken = (pos, i) => {
 	//      places into correct big row   provides step pattern and individual row spacing
-	return (90 * int.pos)       +        (28 * Math.floor((i / 3)))
+	return (90 * pos)       +        (28 * Math.floor((i / 3)))
 }
 
 export const lasso = (prob, place) => {
