@@ -23,7 +23,7 @@ const compTen = (prob, place, ctx) => {
 	ctx.lineTo(l.xLeft, l.yMid)
 	ctx.lineTo(l.xTopL, l.yMid)
 	ctx.closePath()
-	arrow(prob, place, ctx)
+	// arrow(prob, place, ctx)
 	ctx.stroke()
 }
 
